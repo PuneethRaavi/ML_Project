@@ -1,0 +1,83 @@
+Project Question
+	Can we predict financial inclusion in India—measured by whether individuals have a bank account or use digital payments—using socioeconomic and demographic characteristics?
+
+Objectives
+	•	To identify the key demographic and socioeconomic drivers of financial inclusion in India.
+	•	To compare the performance of traditional econometric models (Logistic Regression) with machine learning models (ExtraTrees, AdaBoost).
+	•	To provide insights into which groups remain excluded from formal financial services.
+
+Methods
+	•	Dataset: India subsample from the World Bank Global Findex 2021 database.
+	•	Preprocessing: Data cleaning, handling missing values, encoding categorical variables.
+	•	Models:
+	•	Logistic Regression (baseline, interpretable).
+	•	Ensemble ML models: ExtraTrees, AdaBoost.
+	•	Evaluation: Classification accuracy, ROC-AUC, and feature importance ranking.
+
+Expected Outputs
+	•	A predictive model for financial inclusion at the individual level.
+	•	Feature importance analysis showing which socioeconomic factors (e.g., income, gender, education, employment, rural/urban) drive inclusion.
+	•	Policy-oriented recommendations for improving financial access in underrepresented groups.
+
+Partners
+	•	Data Provider: World Bank (Global Findex database).
+	•	Research Context: This project is independent, but findings align with financial inclusion goals of the Reserve Bank of India, NITI Aayog, and financial policymakers.
+
+Dataset
+	•	Rows (observations): 3,000
+	•	Columns (variables): 119
+
+Key Variables (first few)
+	Demographics:
+	•	female (1 = female, 2 = male)
+	•	age
+	•	educ (education level)
+	•	inc_q (income quintile, 1–5)
+	•	emp_in (employment status)
+	•	urbanicity_f2f (urban/rural)
+	Financial Inclusion (potential targets):
+	•	account → Has any financial institution account (Yes/No)
+	•	account_fin → Has an account at a financial institution
+	•	account_mob → Has a mobile money account
+	•	anydigpayment → Has made a digital payment
+	•	merchantpay_dig → Made a digital payment to merchants
+	Other financial behaviors:
+	•	receive_wages, receive_transfers, receive_pension, pay_utilities, remittances
+	•	mobileowner, internetaccess
+
+Good Target Variable Candidates
+	•	account → baseline measure of financial inclusion (has an account or not).
+	•	anydigpayment → digital financial inclusion (binary).
+	•	account_mob → mobile money adoption.
+
+Target Variable (Dependent)
+	account → whether an individual in India has any financial account (bank, mobile, or other).
+	Reason:
+	•	It’s the core indicator of financial inclusion.
+	•	Binary classification problem → fits Logistic Regression, ExtraTrees, AdaBoost.
+	•	Policy-relevant (Reserve Bank of India & World Bank use this measure).
+
+Predictor Variables (Independent)
+We’ll use a mix of demographic, socioeconomic, and access-related variables:
+	Demographics
+	•	female (gender)
+	•	age
+	•	educ (education level)
+	Socioeconomic
+	•	inc_q (income quintile)
+	•	emp_in (employment status)
+	•	urbanicity_f2f (urban vs rural)
+	Technology / Access
+	•	mobileowner (owns a mobile phone)
+	•	internetaccess (internet availability)
+	Financial Behavior (past year)
+    •	saved 
+    •	borrowed 
+	•	pay_utilities
+	•	remittances
+	•	receive_wages
+	•	receive_transfers
+    •	receive_pension
+    •	receive_agriculture
+
+
