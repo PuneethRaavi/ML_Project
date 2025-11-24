@@ -10,9 +10,12 @@ Methods
 	•	Dataset: India subsample from the World Bank Global Findex 2021 database.
 	•	Preprocessing: Data cleaning, handling missing values, encoding categorical variables.
 	•	Models:
+	•	Desion Tree
+	•	Ensemble ML models: ExtraTrees, RandomForest, GradientBoosting, Bagging, AdaBoost
+	•	SVM
+	•	Neural Networks
 	•	Logistic Regression (baseline, interpretable).
-	•	Ensemble ML models: ExtraTrees, AdaBoost.
-	•	Evaluation: Classification accuracy, ROC-AUC, and feature importance ranking.
+	•	Evaluation: Comparing metrics(Classification accuracy, precision, recall, f1, ROC-AUC) and feature importance ranking.
 
 Expected Outputs
 	•	A predictive model for financial inclusion at the individual level.
